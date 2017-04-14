@@ -1,0 +1,1 @@
+TODO: mention observer strong vs weak referencing in comments/blog
