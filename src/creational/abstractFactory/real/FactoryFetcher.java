@@ -1,7 +1,5 @@
 package creational.abstractFactory.real;
 
-import android.graphics.Region;
-
 /**
  * Created by jackfrancisdalton on 07/04/17.
  */

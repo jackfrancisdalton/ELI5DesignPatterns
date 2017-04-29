@@ -5,15 +5,26 @@ package behavioural.chainOfResponsibility.concept;
  */
 public class Main {
     public static void main(String[] args) {
-        Process pa =  new ProcessA();
-        Process pb = new ProcessB();
-        Process pc = new ProcessC();
+        //Declare the processes
+        AbstractHandler pa =  new HandlerA();
+        AbstractHandler pb = new HandlerB();
+        AbstractHandler pc = new HandlerC();
 
-        pa.setNextPorcess(pb);
-        pb.setNextPorcess(pc);
+        //Chain the processes
+        pa.setNextHandler(pb);
+        pb.setNextHandler(pc);
 
-        pa.executeProcess(new Request("Hello World", "B"));
-        pa.executeProcess(new Request("Hello World", "C"));
-        pa.executeProcess(new Request("Hello World", "F"));
+        //Pass through A, until and call B
+        pa.executeProcess(new Request("Hello World!", "B"));
+
+        //Pass process A and B, and call on C
+        pa.executeProcess(new Request("Hello World!!", "C"));
+
+        //Pass all processes and handle unsupported process
+        pa.executeProcess(new Request("Hello World!!!", "F"));
+    }
+
+    public static void print(String vlaue) {
+        System.out.println(vlaue);
     }
 }

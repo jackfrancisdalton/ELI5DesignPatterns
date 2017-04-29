@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
         //Define despensers of specific notes
-        CashDespenser cd50 = new ImpCashDespenser(50, 2);
+        CashDespenser cd50 = new ImpCashDespenser(50, 1);
         CashDespenser cd20 = new ImpCashDespenser(20, 3);
         CashDespenser cd10 = new ImpCashDespenser(10, 5);
         CashDespenser cd5 = new ImpCashDespenser(5, 5);

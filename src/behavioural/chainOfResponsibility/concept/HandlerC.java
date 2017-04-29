@@ -3,12 +3,12 @@ package behavioural.chainOfResponsibility.concept;
 /**
  * Created by jackfrancisdalton on 12/04/17.
  */
-public class ProcessC extends Process {
+public class HandlerC extends AbstractHandler {
 
-    public ProcessC() {}
+    public HandlerC() {}
 
     @Override
-    void printWord(Request request) {
+    void print(Request request) {
         System.out.println("C:" + request.getWord());
     }
 

@@ -1,6 +1,5 @@
 package structural.bridge.real;
 
-import android.graphics.drawable.shapes.Shape;
 
 /**
  * Created by jackfrancisdalton on 06/04/17.
