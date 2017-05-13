@@ -4,21 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by jackfrancisdalton on 07/04/17.
+ * Invoker
  */
 public class QueryRunner {
-    List<QueryCommand> querys = new ArrayList<>();
+    List<QueryCommand> queries = new ArrayList<>();
 
     public QueryRunner() {}
 
     public void addQuery(QueryCommand q) {
-        querys.add(q);
+        queries.add(q);
     }
 
-    public void runQuerys() {
-        for (QueryCommand q: querys) {
-            q.execute();
-        }
-        querys.remove(querys);
+    public void runAllQueries() {
+        queries.forEach(q -> q.execute());
+        queries.remove(queries);
     }
 }

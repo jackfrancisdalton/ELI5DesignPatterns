@@ -1,6 +1,8 @@
 package behavioural.command.real;
 
-
+/**
+ * The Item(Receiver)
+ */
 public class Entity {
     private String id;
 
