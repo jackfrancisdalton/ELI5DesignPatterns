@@ -1,8 +1,11 @@
 package behavioural.command.concept;
 
-/**
- * Created by jackfrancisdalton on 07/04/17.
- */
-public interface Command {
-    void execute();
+public abstract class Command {
+    protected Item item;
+
+    public Command(Item item) {
+        this.item = item;
+    }
+
+    abstract void execute();
 }

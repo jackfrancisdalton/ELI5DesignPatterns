@@ -1,13 +1,9 @@
 package behavioural.command.concept;
 
-/**
- * Created by jackfrancisdalton on 07/04/17.
- */
-public class CommandImpB implements Command{
-    private Item item;
+public class CommandImpB extends Command{
 
     public CommandImpB(Item item) {
-        this.item = item;
+        super(item);
     }
 
     @Override

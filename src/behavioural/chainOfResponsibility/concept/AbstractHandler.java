@@ -1,8 +1,15 @@
 package behavioural.chainOfResponsibility.concept;
 
+/**
+ * Abstract class that defines a handler object
+ *
+ *  In some cases people will use interfaces and leave getting and setting "nextHandler"
+ *  to the POJO that implements it. In this case we define these in an abstract class
+ */
+
 public abstract class AbstractHandler {
 
-    //The next process in the chain of responsibility
+    //The next handler in the chain of responsibility
     private AbstractHandler nextHandler;
 
     //Method each process has unique implementations for
