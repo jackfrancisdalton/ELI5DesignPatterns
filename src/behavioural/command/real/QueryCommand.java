@@ -1,7 +1,7 @@
 package behavioural.command.real;
 
 /**
- * Created by jackfrancisdalton on 07/04/17.
+ * Command interface
  */
 public interface QueryCommand {
     void execute();

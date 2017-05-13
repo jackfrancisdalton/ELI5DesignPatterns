@@ -1,16 +1,14 @@
 package behavioural.command.concept;
 
-/**
- * Created by jackfrancisdalton on 07/04/17.
- */
-public class CommandImpA extends Command{
+public class CommandImpA implements ICommand {
+    private Item item;
 
     public CommandImpA(Item item) {
-        super(item);
+        this.item = item;
     }
 
     @Override
     public void execute() {
-        System.out.println("command A prints:" + item);
+        System.out.println("A:" + item);
     }
 }

@@ -6,12 +6,21 @@ package behavioural.command.real;
 public class Main {
 
     public static void main(String[] args) {
-        QueryCommand q1 = new MongoDBCreateQuery(new Entity("ABCD"));
-        QueryCommand q2 = new SQLCreateQuery(new Entity("XYZ"));
+
+        //Instantiate entities
+        Entity entityA = new Entity("ABC");
+        Entity entityB = new Entity("XYZ");
+
+        //Instantiate commands, wrapping entities inside of commands
+        QueryCommand q1 = new MongoDBCreateQuery(entityA);
+        QueryCommand q2 = new SQLCreateQuery(entityB);
+
+        //Instantiate invoker
         QueryRunner queryRunner = new QueryRunner();
-        
         queryRunner.addQuery(q1);
         queryRunner.addQuery(q2);
-        queryRunner.runQuerys();
+
+        //Execute commands
+        queryRunner.runAllQueries();
     }
 }
