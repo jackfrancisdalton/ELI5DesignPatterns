@@ -1,15 +1,15 @@
 package behavioural.command.concept;
 
 public class CommandImpB implements ICommand {
-    private Item item;
+    private Receiver receiver;
 
-    public CommandImpB(Item item) {
-        this.item = item;
+    public CommandImpB(Receiver receiver) {
+        this.receiver = receiver;
     }
 
 
     @Override
     public void execute() {
-        System.out.println("B:" + item.toString());
+        System.out.println("B:" + receiver.toString());
     }
 }

@@ -5,8 +5,8 @@ public class Main {
     public static void main(String[] args) {
 
         //Create items
-        Item hello = new Item("Hello");
-        Item world = new Item("Word");
+        Receiver hello = new Receiver("Hello");
+        Receiver world = new Receiver("Word");
 
         //Wrap items in commands
         ICommand commandA = new CommandImpA(hello);
